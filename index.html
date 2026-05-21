@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sejoon Jun | Undergraduate Researcher</title>
+  <meta name="author" content="Sejoon Jun" />
+  <meta name="description" content="Hi, I'm Sejoon Jun, a 4th-year undergraduate at KAIST and a Visiting Researcher at Northeastern University, working on world models and robotics." />
+  <meta property="og:title" content="Sejoon Jun | Undergraduate Researcher" />
+  <meta property="og:description" content="Undergraduate researcher at KAIST. Visiting Researcher at Northeastern University. Research interests: world models and robotics." />
+  <meta property="og:image" content="assets/profile.jpg" />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       THEME — tweak these CSS variables to recolor the whole page
+       ============================================================ */
+    :root {
+      --bg: #ffffff;
+      --text: #2c2c2c;
+      --muted: #6a6a6a;
+      --accent: #2a5d8f;       /* link color */
+      --accent-hover: #1a3d5f;
+      --border: #e6e6e6;
+      --serif: 'Lora', Georgia, 'Times New Roman', serif;
+      --sans: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --max-width: 860px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrapper {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s ease, border-color 0.15s ease;
+    }
+    a:hover {
+      color: var(--accent-hover);
+      border-bottom-color: var(--accent-hover);
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 2.4rem;
+      margin: 0 0 0.6em 0;
+      letter-spacing: -0.01em;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 1.5rem;
+      margin: 3rem 0 1.4rem 0;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p { margin: 0.8em 0; }
+    strong { font-weight: 700; }
+
+    /* ============================================================
+       HERO — intro text + profile photo
+       Photo is now LARGER and SQUARE (no border-radius circle)
+       ============================================================ */
+    .hero {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+    .hero-text { flex: 1; min-width: 0; }
+    .hero-photo {
+      flex: 0 0 340px;
+      width: 340px;
+      height: 340px;
+      border-radius: 6px;       /* subtle rounding; set to 0 for sharp corners */
+      object-fit: cover;
+      background: #eee;
+      border: 1px solid var(--border);
+    }
+
+    /* Social/contact links row */
+    .social {
+      margin-top: 1.2rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .social a {
+      margin-right: 14px;
+      display: inline-block;
+    }
+
+    /* ============================================================
+       PUBLICATIONS — image on the left, details on the right
+       ============================================================ */
+    .publication {
+      display: flex;
+      gap: 24px;
+      margin: 1.8rem 0;
+      align-items: flex-start;
+    }
+    .pub-image {
+      flex: 0 0 260px;
+      width: 260px;
+      height: auto;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: #f7f7f7;
+    }
+    .pub-info { flex: 1; min-width: 0; }
+    .pub-title {
+      font-weight: 700;
+      margin: 0 0 0.4em 0;
+      font-size: 1.2rem;
+      line-height: 1.35;
+    }
+    .pub-authors {
+      color: var(--text);
+      margin: 0 0 0.2em 0;
+      font-size: 0.95rem;
+    }
+    .pub-authors .me { font-weight: 700; }
+    .pub-venue {
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 0.5em 0;
+      font-size: 0.95rem;
+    }
+    .pub-links a {
+      margin-right: 10px;
+      font-size: 0.9rem;
+    }
+
+    /* ============================================================
+       NEWS — date column + content column
+       ============================================================ */
+    .news-item {
+      display: flex;
+      gap: 24px;
+      margin: 1.2rem 0;
+      align-items: flex-start;
+    }
+    .news-date {
+      flex: 0 0 110px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding-top: 2px;
+      font-weight: 700;
+    }
+    .news-content {
+      flex: 1;
+      font-size: 0.98rem;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    /* ============================================================
+       MOBILE — stack things vertically on small screens
+       ============================================================ */
+    @media (max-width: 700px) {
+      .wrapper { padding: 32px 18px 60px; }
+      h1 { font-size: 1.9rem; }
+      .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+      }
+      .hero-photo { width: 260px; height: 260px; flex-basis: 260px; }
+      .publication { flex-direction: column; gap: 14px; }
+      .pub-image { width: 100%; max-width: 360px; flex-basis: auto; }
+      .news-item { flex-direction: column; gap: 4px; }
+      .news-date { flex-basis: auto; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- ============================================================
+         HERO SECTION
+         ============================================================ -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Sejoon Jun</h1>
+        <p>
+          I am a 4th-year undergraduate student at
+          <a href="https://www.kaist.ac.kr/en/" target="_blank" rel="noopener">KAIST</a>.
+          My research interests lie in <strong>world models</strong> and <strong>robotics</strong>,
+          and I am broadly excited about building intelligent systems that can perceive,
+          predict, and interact with the physical world.
+        </p>
+        <p>
+          Currently, I am a <strong>Visiting Researcher at
+          <a href="https://www.northeastern.edu/" target="_blank" rel="noopener">Northeastern University</a></strong>
+          in Boston, working under the supervision of
+          <a href="https://ltorresa.github.io/home.html" target="_blank" rel="noopener">Prof. Lorenzo Torresani</a>.
+          At the same time, I am a research collaborator with
+          <a href="https://yilundu.github.io/" target="_blank" rel="noopener">Prof. Yilun Du</a>
+          at <a href="https://www.harvard.edu/" target="_blank" rel="noopener">Harvard</a>,
+          actively working with
+          <a href="https://yewr.github.io/" target="_blank" rel="noopener">Dr. Weirui Ye</a>
+          at <a href="https://www.mit.edu/" target="_blank" rel="noopener">MIT</a>.
+        </p>
+
+        <!-- Social / contact links — edit the hrefs, or delete any you don't use -->
+        <div class="social">
+          <a href="mailto:sejoon@kaist.ac.kr">Email</a>
+          <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://github.com/sejoonjun" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/sejoon-jun-5531391b2" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter/X</a>
+        </div>
+      </div>
+
+      <img class="hero-photo" src="assets/profile.jpg" alt="Sejoon Jun" />
+    </section>
+
+
+    <!-- ============================================================
+         PUBLICATIONS — copy a <div class="publication"> block to add more.
+         ============================================================ -->
+    <h2>Publications</h2>
+
+    <!-- TBS -->
+    <div class="publication">
+      <img class="pub-image" src="https://sejoonjun.github.io/TBS/assets/main_1.jpg" alt="TBS teaser" />
+      <div class="pub-info">
+        <p class="pub-title">
+          <a href="https://sejoonjun.github.io/TBS/" target="_blank" rel="noopener">
+            Temporal Backtracking Search for Test-time Generative Video Reasoning
+          </a>
+        </p>
+        <p class="pub-authors">
+          <span class="me">Sejoon Jun</span>,
+          <a href="https://scholar.google.com/citations?user=TOYBXFQAAAAJ&hl=en" target="_blank" rel="noopener">Zheng Ding</a>,
+          <a href="https://hither1.github.io/" target="_blank" rel="noopener">Chloe H. Su</a>,
+          <a href="https://yewr.github.io/" target="_blank" rel="noopener">Weirui Ye</a>,
+          <a href="https://yilundu.github.io/" target="_blank" rel="noopener">Yilun Du</a>
+        </p>
+        <p class="pub-venue">Preprint, 2026</p>
+        <p class="pub-links">
+          <a href="https://sejoonjun.github.io/TBS/" target="_blank" rel="noopener">Project Page</a>
+          <a href="https://sejoonjun.github.io/TBS/assets/tbs_paper.pdf" target="_blank" rel="noopener">PDF</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- TrajPilot -->
+    <div class="publication">
+      <img class="pub-image" src="https://farsightlab.github.io/TrajPilot/assets/teaser.jpg" alt="TrajPilot teaser" />
+      <div class="pub-info">
+        <p class="pub-title">
+          <a href="https://farsightlab.github.io/TrajPilot/" target="_blank" rel="noopener">
+            How You Move Tells What You'll Do: Trajectory-Conditioned Egocentric Prediction
+          </a>
+        </p>
+        <p class="pub-authors">
+          <span class="me">Sejoon Jun</span>,
+          <a href="https://itruonghai.github.io" target="_blank" rel="noopener">Hai Nguyen-Truong</a>,
+          <a href="https://seminaraluigi.altervista.org" target="_blank" rel="noopener">Luigi Seminara</a>,
+          <a href="https://ltorresa.github.io/home.html" target="_blank" rel="noopener">Lorenzo Torresani</a>
+        </p>
+        <p class="pub-venue">arXiv preprint, 2026</p>
+        <p class="pub-links">
+          <a href="https://farsightlab.github.io/TrajPilot/" target="_blank" rel="noopener">Project Page</a>
+          <a href="https://arxiv.org/abs/2605.20388" target="_blank" rel="noopener">arXiv</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- STG -->
+    <div class="publication">
+      <img class="pub-image" src="https://raw.githubusercontent.com/aailab-kaist/STG/main/assets/overview.png" alt="STG overview" />
+      <div class="pub-info">
+        <p class="pub-title">
+          <a href="https://arxiv.org/abs/2510.24012" target="_blank" rel="noopener">
+            Training-Free Safe Text Embedding Guidance for Text-to-Image Diffusion Models
+          </a>
+        </p>
+        <p class="pub-authors">
+          Byeonghu Na, Mina Kang, Jiseok Kwak, Minsang Park, Jiwoo Shin,
+          <span class="me">Sejoon Jun</span>, Gayoung Lee, Jin-Hwa Kim, Il-Chul Moon
+        </p>
+        <p class="pub-venue">NeurIPS 2025</p>
+        <p class="pub-links">
+          <a href="https://arxiv.org/abs/2510.24012" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://openreview.net/forum?id=fbDHv2LQZJ" target="_blank" rel="noopener">OpenReview</a>
+          <a href="https://github.com/aailab-kaist/STG" target="_blank" rel="noopener">Code</a>
+        </p>
+      </div>
+    </div>
+
+
+    <!-- ============================================================
+         NEWS — newest at the top. Copy a .news-item block to add more.
+         ============================================================ -->
+    <h2>News</h2>
+
+    <div class="news-item">
+      <div class="news-date">2026</div>
+      <div class="news-content">
+        Started a research visit at
+        <a href="https://www.northeastern.edu/" target="_blank" rel="noopener">Northeastern University</a>
+        under the supervision of
+        <a href="https://ltorresa.github.io/home.html" target="_blank" rel="noopener">Prof. Lorenzo Torresani</a>.
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">2026</div>
+      <div class="news-content">
+        Began collaborating with
+        <a href="https://yilundu.github.io/" target="_blank" rel="noopener">Prof. Yilun Du</a> at Harvard
+        and <a href="https://yewr.github.io/" target="_blank" rel="noopener">Dr. Weirui Ye</a> at MIT
+        on research in world models.
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Sep 2025</div>
+      <div class="news-content">
+        Our paper <em>"Training-Free Safe Text Embedding Guidance for Text-to-Image Diffusion Models"</em>
+        was accepted at <strong>NeurIPS 2025</strong>.
+      </div>
+    </div>
+
+
+    <footer>
+      © 2026 Sejoon Jun
+    </footer>
+
+  </div>
+</body>
+</html>
