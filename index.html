@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Sejoon Jun | Undergraduate Researcher</title>
   <meta name="author" content="Sejoon Jun" />
   <meta name="description" content="Hi, I'm Sejoon Jun, a 4th-year undergraduate at KAIST and a Visiting Researcher at Northeastern University, working on world models and robotics." />
   <meta property="og:title" content="Sejoon Jun | Undergraduate Researcher" />
   <meta property="og:description" content="Undergraduate researcher at KAIST. Visiting Researcher at Northeastern University. Research interests: world models and robotics." />
-  <meta property="og:image" content="assets/profile.jpg" />
+  <meta property="og:image" content="https://sejoonjun.github.io/Webpage/assets/profile.jpg" />
+  <meta property="og:url" content="https://sejoonjun.github.io/Webpage/" />
   <meta property="og:type" content="website" />
-
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet" />
   <style>
     /* ============================================================
        THEME — tweak these CSS variables to recolor the whole page
@@ -24,7 +23,7 @@
       --bg: #ffffff;
       --text: #2c2c2c;
       --muted: #6a6a6a;
-      --accent: #2a5d8f;       /* link color */
+      --accent: #2a5d8f;          /* link color */
       --accent-hover: #1a3d5f;
       --border: #e6e6e6;
       --serif: 'Lora', Georgia, 'Times New Roman', serif;
@@ -97,7 +96,7 @@
       flex: 0 0 340px;
       width: 340px;
       height: 340px;
-      border-radius: 6px;       /* subtle rounding; set to 0 for sharp corners */
+      border-radius: 6px;         /* subtle rounding; set to 0 for sharp corners */
       object-fit: cover;
       background: #eee;
       border: 1px solid var(--border);
@@ -124,12 +123,13 @@
       align-items: flex-start;
     }
     .pub-image {
-      flex: 0 0 260px;
-      width: 260px;
+      flex: 0 0 340px;
+      width: 340px;
       height: auto;
       border: 1px solid var(--border);
       border-radius: 4px;
       background: #f7f7f7;
+      display: block;
     }
     .pub-info { flex: 1; min-width: 0; }
     .pub-title {
@@ -200,13 +200,12 @@
       }
       .hero-photo { width: 260px; height: 260px; flex-basis: 260px; }
       .publication { flex-direction: column; gap: 14px; }
-      .pub-image { width: 100%; max-width: 360px; flex-basis: auto; }
+      .pub-image { width: 100%; max-width: 420px; flex-basis: auto; }
       .news-item { flex-direction: column; gap: 4px; }
       .news-date { flex-basis: auto; }
     }
   </style>
 </head>
-
 <body>
   <div class="wrapper">
 
@@ -219,13 +218,13 @@
         <p>
           I am a 4th-year undergraduate student at
           <a href="https://www.kaist.ac.kr/en/" target="_blank" rel="noopener">KAIST</a>.
-          My research interests lie in <strong>world models</strong> and <strong>robotics</strong>,
+          My research interests lie in world models and robotics,
           and I am broadly excited about building intelligent systems that can perceive,
           predict, and interact with the physical world.
         </p>
         <p>
-          Currently, I am a <strong>Visiting Researcher at
-          <a href="https://www.northeastern.edu/" target="_blank" rel="noopener">Northeastern University</a></strong>
+          Currently, I am a Visiting Researcher at
+          <a href="https://www.northeastern.edu/" target="_blank" rel="noopener">Northeastern University</a>
           in Boston, working under the supervision of
           <a href="https://ltorresa.github.io/home.html" target="_blank" rel="noopener">Prof. Lorenzo Torresani</a>.
           At the same time, I am a research collaborator with
@@ -239,16 +238,45 @@
         <!-- Social / contact links — edit the hrefs, or delete any you don't use -->
         <div class="social">
           <a href="mailto:sejoon@kaist.ac.kr">Email</a>
-          <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://scholar.google.com/citations?user=f_YY48wAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
           <a href="https://github.com/sejoonjun" target="_blank" rel="noopener">GitHub</a>
           <a href="https://www.linkedin.com/in/sejoon-jun-5531391b2" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter/X</a>
         </div>
       </div>
 
       <img class="hero-photo" src="assets/profile.jpg" alt="Sejoon Jun" />
     </section>
 
+    <!-- ============================================================
+         NEWS — newest at the top. Copy a .news-item block to add more.
+         ============================================================ -->
+    <h2>News</h2>
+
+    <div class="news-item">
+      <div class="news-date">May 2026</div>
+      <div class="news-content">
+        Our paper <em>"Temporal Backtracking Search for Test-time Generative Video Reasoning"</em>
+        was accepted at the <strong>ICML 2026 FoGen Workshop</strong>.
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Jan 2026</div>
+      <div class="news-content">
+        Started a research visit at
+        <a href="https://www.northeastern.edu/" target="_blank" rel="noopener">Northeastern University</a>
+        under the supervision of
+        <a href="https://ltorresa.github.io/home.html" target="_blank" rel="noopener">Prof. Lorenzo Torresani</a>.
+      </div>
+    </div>
+
+    <div class="news-item">
+      <div class="news-date">Sep 2025</div>
+      <div class="news-content">
+        Our paper <em>"Training-Free Safe Text Embedding Guidance for Text-to-Image Diffusion Models"</em>
+        was accepted at <strong>NeurIPS 2025</strong>.
+      </div>
+    </div>
 
     <!-- ============================================================
          PUBLICATIONS — copy a <div class="publication"> block to add more.
@@ -257,7 +285,11 @@
 
     <!-- TBS -->
     <div class="publication">
-      <img class="pub-image" src="https://sejoonjun.github.io/TBS/assets/main_1.jpg" alt="TBS teaser" />
+      <video class="pub-image" id="tbs-teaser"
+             src="https://sejoonjun.github.io/TBS/assets/robotwin.mp4"
+             poster="https://sejoonjun.github.io/TBS/assets/main_1.jpg"
+             autoplay muted loop playsinline
+             aria-label="TBS robotic manipulation teaser: BoN fails, TBS succeeds"></video>
       <div class="pub-info">
         <p class="pub-title">
           <a href="https://sejoonjun.github.io/TBS/" target="_blank" rel="noopener">
@@ -266,12 +298,12 @@
         </p>
         <p class="pub-authors">
           <span class="me">Sejoon Jun</span>,
-          <a href="https://scholar.google.com/citations?user=TOYBXFQAAAAJ&hl=en" target="_blank" rel="noopener">Zheng Ding</a>,
+          <a href="https://scholar.google.com/citations?user=TOYBXFQAAAAJ&amp;hl=en" target="_blank" rel="noopener">Zheng Ding</a>,
           <a href="https://hither1.github.io/" target="_blank" rel="noopener">Chloe H. Su</a>,
           <a href="https://yewr.github.io/" target="_blank" rel="noopener">Weirui Ye</a>,
           <a href="https://yilundu.github.io/" target="_blank" rel="noopener">Yilun Du</a>
         </p>
-        <p class="pub-venue">Preprint, 2026</p>
+        <p class="pub-venue">ICML 2026 FoGen Workshop</p>
         <p class="pub-links">
           <a href="https://sejoonjun.github.io/TBS/" target="_blank" rel="noopener">Project Page</a>
           <a href="https://arxiv.org/abs/2606.13861" target="_blank" rel="noopener">arXiv</a>
@@ -324,45 +356,47 @@
       </div>
     </div>
 
-
-    <!-- ============================================================
-         NEWS — newest at the top. Copy a .news-item block to add more.
-         ============================================================ -->
-    <h2>News</h2>
-
-    <div class="news-item">
-      <div class="news-date">2026</div>
-      <div class="news-content">
-        Started a research visit at
-        <a href="https://www.northeastern.edu/" target="_blank" rel="noopener">Northeastern University</a>
-        under the supervision of
-        <a href="https://ltorresa.github.io/home.html" target="_blank" rel="noopener">Prof. Lorenzo Torresani</a>.
-      </div>
-    </div>
-
-    <div class="news-item">
-      <div class="news-date">2026</div>
-      <div class="news-content">
-        Began collaborating with
-        <a href="https://yilundu.github.io/" target="_blank" rel="noopener">Prof. Yilun Du</a> at Harvard
-        and <a href="https://yewr.github.io/" target="_blank" rel="noopener">Dr. Weirui Ye</a> at MIT
-        on research in world models.
-      </div>
-    </div>
-
-    <div class="news-item">
-      <div class="news-date">Sep 2025</div>
-      <div class="news-content">
-        Our paper <em>"Training-Free Safe Text Embedding Guidance for Text-to-Image Diffusion Models"</em>
-        was accepted at <strong>NeurIPS 2025</strong>.
-      </div>
-    </div>
-
-
     <footer>
       © 2026 Sejoon Jun
     </footer>
 
   </div>
+
+  <!-- ============================================================
+       Loops the TBS teaser between START and END seconds only.
+       Edit the two numbers below to change the clip window.
+       If the video is shorter than START, this quietly falls back
+       to looping the whole clip, so nothing breaks.
+       ============================================================ -->
+  <script>
+    (function () {
+      var v = document.getElementById('tbs-teaser');
+      if (!v) return;
+
+      var START = 8;
+      var END = 12;
+
+      // Respect a reduced-motion preference: no autoplay, but give them controls.
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        v.autoplay = false;
+        v.removeAttribute('autoplay');
+        v.controls = true;
+        v.pause();
+        return;
+      }
+
+      v.addEventListener('loadedmetadata', function () {
+        if (!isFinite(v.duration) || v.duration <= START) return; // keep native loop
+        END = Math.min(END, v.duration);
+        v.loop = false;          // we handle looping ourselves from here
+        v.currentTime = START;
+      });
+
+      v.addEventListener('timeupdate', function () {
+        if (v.loop) return;      // metadata not ready, or full-clip fallback in effect
+        if (v.currentTime >= END) v.currentTime = START;
+      });
+    })();
+  </script>
 </body>
 </html>
