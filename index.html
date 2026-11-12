@@ -6,15 +6,18 @@
   <title>Sejoon Jun | Undergraduate Researcher</title>
   <meta name="author" content="Sejoon Jun" />
   <meta name="description" content="Hi, I'm Sejoon Jun, a 4th-year undergraduate at KAIST and a Visiting Researcher at Northeastern University, working on world models and robotics." />
+
   <meta property="og:title" content="Sejoon Jun | Undergraduate Researcher" />
   <meta property="og:description" content="Undergraduate researcher at KAIST. Visiting Researcher at Northeastern University. Research interests: world models and robotics." />
   <meta property="og:image" content="https://sejoonjun.github.io/Webpage/assets/profile.jpg" />
   <meta property="og:url" content="https://sejoonjun.github.io/Webpage/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
   <style>
     /* ============================================================
        THEME — tweak these CSS variables to recolor the whole page
@@ -83,7 +86,6 @@
 
     /* ============================================================
        HERO — intro text + profile photo
-       Photo is now LARGER and SQUARE (no border-radius circle)
        ============================================================ */
     .hero {
       display: flex;
@@ -96,13 +98,12 @@
       flex: 0 0 340px;
       width: 340px;
       height: 340px;
-      border-radius: 6px;         /* subtle rounding; set to 0 for sharp corners */
+      border-radius: 6px;
       object-fit: cover;
       background: #eee;
       border: 1px solid var(--border);
     }
 
-    /* Social/contact links row */
     .social {
       margin-top: 1.2rem;
       font-size: 0.95rem;
@@ -111,48 +112,6 @@
     .social a {
       margin-right: 14px;
       display: inline-block;
-    }
-
-    /* ============================================================
-       PUBLICATIONS — image on the left, details on the right
-       ============================================================ */
-    .publication {
-      display: flex;
-      gap: 24px;
-      margin: 1.8rem 0;
-      align-items: flex-start;
-    }
-    .pub-image {
-      flex: 0 0 340px;
-      width: 340px;
-      height: auto;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      background: #f7f7f7;
-      display: block;
-    }
-    .pub-info { flex: 1; min-width: 0; }
-    .pub-title {
-      font-weight: 700;
-      margin: 0 0 0.4em 0;
-      font-size: 1.2rem;
-      line-height: 1.35;
-    }
-    .pub-authors {
-      color: var(--text);
-      margin: 0 0 0.2em 0;
-      font-size: 0.95rem;
-    }
-    .pub-authors .me { font-weight: 700; }
-    .pub-venue {
-      color: var(--muted);
-      font-style: italic;
-      margin: 0 0 0.5em 0;
-      font-size: 0.95rem;
-    }
-    .pub-links a {
-      margin-right: 10px;
-      font-size: 0.9rem;
     }
 
     /* ============================================================
@@ -176,6 +135,95 @@
       font-size: 0.98rem;
     }
 
+    /* ============================================================
+       PUBLICATIONS — image on the left, details on the right
+       ============================================================ */
+    .pub-legend {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin: -0.6rem 0 1.4rem 0;
+    }
+
+    .publication {
+      display: flex;
+      gap: 24px;
+      margin: 1.8rem 0;
+      align-items: flex-start;
+    }
+    /* Representative papers: whole row gets a soft highlight */
+    .publication.highlight {
+      background: #fdf6dc;
+      border-radius: 6px;
+      padding: 16px;
+      margin-left: -16px;
+      margin-right: -16px;
+    }
+
+    .pub-image {
+      flex: 0 0 260px;
+      width: 260px;
+      height: auto;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: #f7f7f7;
+      display: block;
+    }
+    .pub-info { flex: 1; min-width: 0; }
+
+    .pub-title {
+      font-weight: 700;
+      margin: 0 0 0.4em 0;
+      font-size: 1.2rem;
+      line-height: 1.35;
+    }
+
+    /* C# / P# marker in front of each title.
+       Conference papers get a solid tag, preprints / under review an outlined one. */
+    .pub-label {
+      display: inline-block;
+      min-width: 2.2em;
+      margin-right: 0.45em;
+      padding: 0.05em 0.4em;
+      border: 1.5px solid var(--accent);
+      border-radius: 3px;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 700;
+      line-height: 1.5;
+      text-align: center;
+      vertical-align: 0.15em;
+    }
+    .pub-label.conf {
+      background: var(--accent);
+      color: #fff;
+    }
+    .pub-label.pre {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .pub-authors {
+      color: var(--text);
+      margin: 0 0 0.2em 0;
+      font-size: 0.95rem;
+    }
+    .pub-authors .me { font-weight: 700; }
+    .pub-note {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin: 0 0 0.2em 0;
+    }
+    .pub-venue {
+      color: var(--muted);
+      font-style: italic;
+      margin: 0 0 0.5em 0;
+      font-size: 0.95rem;
+    }
+    .pub-links a {
+      margin-right: 10px;
+      font-size: 0.9rem;
+    }
+
     /* Footer */
     footer {
       margin-top: 4rem;
@@ -192,6 +240,7 @@
     @media (max-width: 700px) {
       .wrapper { padding: 32px 18px 60px; }
       h1 { font-size: 1.9rem; }
+
       .hero {
         flex-direction: column-reverse;
         align-items: center;
@@ -199,8 +248,11 @@
         gap: 24px;
       }
       .hero-photo { width: 260px; height: 260px; flex-basis: 260px; }
+
       .publication { flex-direction: column; gap: 14px; }
-      .pub-image { width: 100%; max-width: 420px; flex-basis: auto; }
+      .publication.highlight { margin-left: -10px; margin-right: -10px; padding: 12px 10px; }
+      .pub-image { width: 100%; max-width: 360px; flex-basis: auto; }
+
       .news-item { flex-direction: column; gap: 4px; }
       .news-date { flex-basis: auto; }
     }
@@ -218,13 +270,13 @@
         <p>
           I am a 4th-year undergraduate student at
           <a href="https://www.kaist.ac.kr/en/" target="_blank" rel="noopener">KAIST</a>.
-          My research interests lie in world models and robotics,
+          My research interests lie in <strong>world models</strong> and <strong>robotics</strong>,
           and I am broadly excited about building intelligent systems that can perceive,
           predict, and interact with the physical world.
         </p>
         <p>
-          Currently, I am a Visiting Researcher at
-          <a href="https://www.northeastern.edu/" target="_blank" rel="noopener">Northeastern University</a>
+          Currently, I am a <strong>Visiting Researcher at
+          <a href="https://www.northeastern.edu/" target="_blank" rel="noopener">Northeastern University</a></strong>
           in Boston, working under the supervision of
           <a href="https://ltorresa.github.io/home.html" target="_blank" rel="noopener">Prof. Lorenzo Torresani</a>.
           At the same time, I am a research collaborator with
@@ -235,7 +287,6 @@
           at <a href="https://www.mit.edu/" target="_blank" rel="noopener">MIT</a>.
         </p>
 
-        <!-- Social / contact links — edit the hrefs, or delete any you don't use -->
         <div class="social">
           <a href="mailto:sjmathy@kaist.ac.kr">Email</a>
           <a href="https://scholar.google.com/citations?user=f_YY48wAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
@@ -251,6 +302,14 @@
          NEWS — newest at the top. Copy a .news-item block to add more.
          ============================================================ -->
     <h2>News</h2>
+
+    <div class="news-item">
+      <div class="news-date">Oct 2026</div>
+      <div class="news-content">
+        New preprint is out:
+        <a href="https://arxiv.org/abs/2610.22686" target="_blank" rel="noopener">Multimodal Filesystem Memory for Long-Horizon Embodied Agents</a>.
+      </div>
+    </div>
 
     <div class="news-item">
       <div class="news-date">Oct 2026</div>
@@ -290,18 +349,48 @@
 
     <!-- ============================================================
          PUBLICATIONS — copy a <div class="publication"> block to add more.
+         Label: <span class="pub-label conf">C#</span> for conference papers,
+                <span class="pub-label pre">P#</span> for preprints / under review.
          ============================================================ -->
     <h2>Publications</h2>
+    <p class="pub-legend">C: conference papers. P: preprints and papers under review. Representative papers are highlighted.</p>
 
-    <!-- TBS -->
+    <!-- P2: MFM -->
     <div class="publication">
-      <video class="pub-image" id="tbs-teaser"
-             src="https://sejoonjun.github.io/TBS/assets/robotwin.mp4"
-             poster="https://sejoonjun.github.io/TBS/assets/main_1.jpg"
-             autoplay muted loop playsinline
-             aria-label="TBS robotic manipulation teaser: BoN fails, TBS succeeds"></video>
+      <img class="pub-image" src="assets/mfm_fig1.jpg" alt="MFM's memory evolution in Minecraft over 36,000 steps" />
       <div class="pub-info">
         <p class="pub-title">
+          <span class="pub-label pre">P2</span>
+          <a href="https://hither1.github.io/MFM-project/" target="_blank" rel="noopener">
+            Multimodal Filesystem Memory for Long-Horizon Embodied Agents
+          </a>
+        </p>
+        <p class="pub-authors">
+          <a href="https://hither1.github.io/" target="_blank" rel="noopener">Chloe H. Su</a>*,
+          Jiahan Li*,
+          Zhenting Qi,
+          Chaoran Cheng,
+          Haoyu Chen,
+          <span class="me">Sejoon Jun</span>,
+          <a href="https://yewr.github.io/" target="_blank" rel="noopener">Weirui Ye</a>,
+          <a href="https://yilundu.github.io/" target="_blank" rel="noopener">Yilun Du</a>
+        </p>
+        <p class="pub-note">* Equal contribution</p>
+        <p class="pub-venue">arXiv preprint, 2026</p>
+        <p class="pub-links">
+          <a href="https://hither1.github.io/MFM-project/" target="_blank" rel="noopener">Project Page</a>
+          <a href="https://arxiv.org/abs/2610.22686" target="_blank" rel="noopener">arXiv</a>
+          <a href="https://github.com/Hither1/MFM" target="_blank" rel="noopener">Code</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- C3: TBS -->
+    <div class="publication highlight">
+      <video class="pub-image" src="https://sejoonjun.github.io/TBS/assets/robotwin.mp4" autoplay loop muted playsinline></video>
+      <div class="pub-info">
+        <p class="pub-title">
+          <span class="pub-label conf">C3</span>
           <a href="https://sejoonjun.github.io/TBS/" target="_blank" rel="noopener">
             Temporal Backtracking Search for Test-time Generative Video Reasoning
           </a>
@@ -321,11 +410,12 @@
       </div>
     </div>
 
-    <!-- TrajPilot -->
-    <div class="publication">
+    <!-- C2: TrajPilot -->
+    <div class="publication highlight">
       <img class="pub-image" src="https://farsightlab.github.io/TrajPilot/assets/teaser.jpg" alt="TrajPilot teaser" />
       <div class="pub-info">
         <p class="pub-title">
+          <span class="pub-label conf">C2</span>
           <a href="https://farsightlab.github.io/TrajPilot/" target="_blank" rel="noopener">
             How You Move Tells What You'll Do: Trajectory-Conditioned Egocentric Prediction
           </a>
@@ -344,11 +434,12 @@
       </div>
     </div>
 
-    <!-- STG -->
+    <!-- C1: STG -->
     <div class="publication">
       <img class="pub-image" src="https://raw.githubusercontent.com/aailab-kaist/STG/main/assets/overview.png" alt="STG overview" />
       <div class="pub-info">
         <p class="pub-title">
+          <span class="pub-label conf">C1</span>
           <a href="https://arxiv.org/abs/2510.24012" target="_blank" rel="noopener">
             Training-Free Safe Text Embedding Guidance for Text-to-Image Diffusion Models
           </a>
@@ -366,47 +457,24 @@
       </div>
     </div>
 
+    <!-- P1: Scene Graph (under review, no public links yet) -->
+    <div class="publication">
+      <img class="pub-image" src="assets/scene_graph_fig1.jpg" alt="Pipeline for building a scene graph from image and point cloud observations for VLM reasoning" />
+      <div class="pub-info">
+        <p class="pub-title">
+          <span class="pub-label pre">P1</span>
+          Scene Graph Grounded Spatial Understanding with Vision-Language Models for Embodied Robotic Systems
+        </p>
+        <p class="pub-authors">
+          Taewoo Kim, Kangje Moon, &hellip;, <span class="me">Sejoon Jun</span>, &hellip;, Il-Chul Moon, Byeonghu Na
+        </p>
+        <p class="pub-venue">Under review</p>
+      </div>
+    </div>
+
     <footer>
       © 2026 Sejoon Jun
     </footer>
-
   </div>
-
-  <!-- ============================================================
-       Loops the TBS teaser between START and END seconds only.
-       Edit the two numbers below to change the clip window.
-       If the video is shorter than START, this quietly falls back
-       to looping the whole clip, so nothing breaks.
-       ============================================================ -->
-  <script>
-    (function () {
-      var v = document.getElementById('tbs-teaser');
-      if (!v) return;
-
-      var START = 8;
-      var END = 12;
-
-      // Respect a reduced-motion preference: no autoplay, but give them controls.
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        v.autoplay = false;
-        v.removeAttribute('autoplay');
-        v.controls = true;
-        v.pause();
-        return;
-      }
-
-      v.addEventListener('loadedmetadata', function () {
-        if (!isFinite(v.duration) || v.duration <= START) return; // keep native loop
-        END = Math.min(END, v.duration);
-        v.loop = false;          // we handle looping ourselves from here
-        v.currentTime = START;
-      });
-
-      v.addEventListener('timeupdate', function () {
-        if (v.loop) return;      // metadata not ready, or full-clip fallback in effect
-        if (v.currentTime >= END) v.currentTime = START;
-      });
-    })();
-  </script>
 </body>
 </html>
