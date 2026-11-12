@@ -32,6 +32,7 @@
       --serif: 'Lora', Georgia, 'Times New Roman', serif;
       --sans: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       --max-width: 860px;
+      --thumb-width: 320px;       /* publication image/video width; change this one value to resize them all */
     }
 
     * { box-sizing: border-box; }
@@ -160,8 +161,8 @@
     }
 
     .pub-image {
-      flex: 0 0 260px;
-      width: 260px;
+      flex: 0 0 var(--thumb-width);
+      width: var(--thumb-width);
       height: auto;
       border: 1px solid var(--border);
       border-radius: 4px;
@@ -367,10 +368,10 @@
         </p>
         <p class="pub-authors">
           <a href="https://hither1.github.io/" target="_blank" rel="noopener">Chloe H. Su</a>*,
-          Jiahan Li*,
-          Zhenting Qi,
-          Chaoran Cheng,
-          Haoyu Chen,
+          <a href="https://ced3-han.github.io/" target="_blank" rel="noopener">Jiahan Li</a>*,
+          <a href="https://zhentingqi.github.io/" target="_blank" rel="noopener">Zhenting Qi</a>,
+          <a href="https://ccr-cheng.github.io/" target="_blank" rel="noopener">Chaoran Cheng</a>,
+          <a href="https://scholar.google.com/citations?user=WQnlt4YAAAAJ&amp;hl=en" target="_blank" rel="noopener">Haoyu Chen</a>,
           <span class="me">Sejoon Jun</span>,
           <a href="https://yewr.github.io/" target="_blank" rel="noopener">Weirui Ye</a>,
           <a href="https://yilundu.github.io/" target="_blank" rel="noopener">Yilun Du</a>
