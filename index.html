@@ -33,7 +33,7 @@
       --sans: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       --max-width: 860px;
       --thumb-width: 320px;       /* default publication image/video width */
-      --thumb-small: 250px;       /* for tall/square figures (MFM, STG) */
+      --thumb-height: 200px;      /* every thumbnail sits in the same 320x200 frame */
     }
 
     * { box-sizing: border-box; }
@@ -164,13 +164,13 @@
     .pub-image {
       flex: 0 0 var(--thumb-width);
       width: var(--thumb-width);
-      height: auto;
+      height: var(--thumb-height);
+      object-fit: contain;        /* whole figure fits inside the frame, nothing is cropped */
       border: 1px solid var(--border);
       border-radius: 4px;
-      background: #f7f7f7;
+      background: #ffffff;
       display: block;
     }
-    .pub-image.thumb-sm { flex-basis: var(--thumb-small); width: var(--thumb-small); }
     .pub-info { flex: 1; min-width: 0; }
 
     .pub-title {
@@ -254,8 +254,7 @@
 
       .publication { flex-direction: column; gap: 14px; }
       .publication.highlight { margin-left: -10px; margin-right: -10px; padding: 12px 10px; }
-      .pub-image,
-      .pub-image.thumb-sm { width: 100%; max-width: 360px; flex-basis: auto; }
+      .pub-image { width: 100%; max-width: 360px; height: auto; aspect-ratio: 16 / 10; flex-basis: auto; }
 
       .news-item { flex-direction: column; gap: 4px; }
       .news-date { flex-basis: auto; }
@@ -360,7 +359,7 @@
 
     <!-- P2: MFM -->
     <div class="publication">
-      <img class="pub-image thumb-sm" src="assets/mfm_fig1.jpg" alt="MFM's memory evolution in Minecraft over 36,000 steps" />
+      <img class="pub-image" src="assets/mfm_fig1.jpg" alt="MFM's memory evolution in Minecraft over 36,000 steps" />
       <div class="pub-info">
         <p class="pub-title">
           <span class="pub-label pre">P2</span>
@@ -439,7 +438,7 @@
 
     <!-- C1: STG -->
     <div class="publication">
-      <img class="pub-image thumb-sm" src="assets/stg_overview_2x2.jpg" alt="Base model, training-based, previous training-free, and our training-free safety approaches for text-to-image diffusion" />
+      <img class="pub-image" src="assets/stg_overview_2x2.jpg" alt="Base model, training-based, previous training-free, and our training-free safety approaches for text-to-image diffusion" />
       <div class="pub-info">
         <p class="pub-title">
           <span class="pub-label conf">C1</span>
